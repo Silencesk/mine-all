@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{64}  -%msg%n</pattern>
+		</encoder>
+	</appender>
+	<appender name="logfile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>D:/data/logs/mine/simpler/simpler.log</File>
+		<!-- <File>/data/logs/mine/simpler/simpler.log</File> -->
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{64} -%msg%n</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>D:/data/logs/mine/simpler/simpler.log%d{yyyy-MM-dd}</fileNamePattern>
+			<!-- <fileNamePattern>/data/logs/mine/simpler/simpler.log%d{yyyy-MM-dd}</fileNamePattern> -->
+		</rollingPolicy>
+	</appender>
+	<!-- 以下必要信息无关日志级别，都进行输出 -->
+    <logger name="org.springframework.web.servlet.DispatcherServlet" level="DEBUG"/>    <!-- SHOW REQUEST PATH -->
+    <logger name="com.jolbox.bonecp.BoneCPDataSource" level="DEBUG"/>   <!-- SHOW JDBC CONNECTION -->
+	<root level="debug">
+		<appender-ref ref="stdout" />
+		<appender-ref ref="logfile" />
+	</root>
+</configuration>

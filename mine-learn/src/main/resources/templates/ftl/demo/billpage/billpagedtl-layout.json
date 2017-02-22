@@ -1,0 +1,105 @@
+{
+    pageType: "BillDetailPage",
+    editorForm:[
+    {
+    	"tableType":"master",
+    	"title":"",
+    	"items":[{
+            id:"userCode",
+            xtype: "textbox",
+            name: "userCode",
+            title: "用户账号",
+            required:false,
+            readonly:false
+    },{
+            id:"userCode",
+            xtype: "textbox",
+            name: "email",
+            title: "邮箱",
+            required:false,
+            readonly:false
+    },{
+            id:"userCode",
+            xtype: "textbox",
+            name: "userName",
+            title: "名称",
+            required:false,
+            readonly:false
+    },{
+            id:"userCode1",
+            xtype: "textbox",
+            name: "email1",
+            title: "邮箱2",
+            required:false,
+            readonly:false
+    },{
+            id:"userCode2",
+            xtype: "textbox",
+            name: "email2",
+            title: "邮箱3",
+            required:false,
+            readonly:false
+    }]
+    }
+    ],	
+    gridConfig:[{
+    	defaultLoad:false,
+        id:"Grid",
+        index:"1",
+        gridCount:"2",
+        idName:"email",
+        title:"选项卡名字1",
+        moduleName:"模块名称",
+        xtype:"grid",
+        columns:[[
+            {
+            field:"userCode",title:"是否管理员",width:200,sortable:true,
+				"filterConfig":{
+	                                    "type":"combobox",
+	                                    "data":[{"id":"true","text":"是"}],
+	                                    "valueField" : "id",
+	                                    "textField" : "text",
+	                                    "filterOperator":"equal"
+	            },
+            	editor: {
+							type:"textbox",
+							options:{required:true}
+						}					
+			},
+			{field:"userName",title:"供应商",width:200,sortable:true}
+        ]],
+        queryParams:{},
+        loadUrl:"/user/find.json",
+        localhost:"",
+        saveUrl:"user/hs.json",
+        exportUrl:""
+    },{
+    	defaultLoad:false,
+    	title:"选项卡名字",
+        id:"Grid2",
+        index:"2",
+        gridCount:"2",
+        moduleName:"模块名称22",
+        xtype:"grid",
+        columns:[[
+            {field:"admin",title:"是否管理员",width:200,sortable:true,
+				"filterConfig":{
+	                                    "type":"combobox",
+	                                    "data":[{"id":"true","text":"是"}],
+	                                    "valueField" : "id",
+	                                    "textField" : "text",
+	                                    "filterOperator":"equal"
+	            },
+            	editor: {
+							type:"datebox",
+							options:{required:true}
+						}					
+			}
+        ]],
+        queryParams:{},
+        loadUrl:"/user/find.json",
+        localhost:"",
+        saveUrl:"user/hs.json",
+        exportUrl:""
+    }]
+}

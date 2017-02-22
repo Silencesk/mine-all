@@ -1,0 +1,36 @@
+# maven noise
+target/
+
+# gradle noise
+.gradle
+
+# osx noise
+.DS_Store
+profile
+
+# IntelliJ Idea noise
+.idea
+*.iws
+*.ipr
+*.iml
+*.releaseBackup
+atlassian-ide-plugin.xml
+
+# NB noise
+nbactions.xml
+nb-configuration.xml
+
+# Eclipse noise
+.settings
+.project
+.classpath
+.externalToolBuilders
+
+# Maven plugins noise
+dependency-reduced-pom.xml
+pom.xml.versionsBackup
+
+# auto ignore
+/blf1-template-web/src/main/webapp/resources/js
+/blf1-template-web/src/main/webapp/resources/static
+/blf1-template-web/webdefault.xml

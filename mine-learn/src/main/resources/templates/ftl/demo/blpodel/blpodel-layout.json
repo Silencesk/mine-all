@@ -1,0 +1,159 @@
+{
+    pageType: "BillPage",
+    searchItems: [{
+            id:"billStatus",
+            xtype: "combobox",
+            name: "billStatus",
+            title: "单据状态",
+            required:false,
+            readonly:false,
+            spType:"in",
+            multiple:true,
+            data:"$.eyd.demo.blpodel.billStatusData",
+            valueField: "itemCode",
+            textField:"itemName"
+    },{
+            id:"billNo",
+            xtype: "textbox",
+            name: "billNo",
+            title: "单据编号",
+            required:false,
+            readonly:false,
+            options:'spType:"like"'
+    },{
+            xtype: "textbox",
+            name: "creator",
+            title: "创建人",
+            required:false,
+            readonly:false
+    },{
+            xtype: "textbox",
+            name: "auditor",
+            title: "审核人",
+            required:false,
+    },{
+            xtype: "datebox",
+            name: "createTime",
+            title: "创建时间",
+            required:false,
+            options:'spType:"gte"'
+    },{
+            xtype: "datebox",
+            name: "createTime1",
+            title: "至",
+            required:false,
+	    options:'map:"createTime",spType:"lte"'
+    },{
+            xtype: "datebox",
+            name: "auditTime",
+            title: "审核时间",
+            required:false,
+            readonly:false,
+            options:'spType:"gte"'
+    },{
+            xtype: "datebox",
+            name: "auditTime1",
+            title: "至",
+            required:false,
+            readonly:false,
+            options:'map:"auditTime",spType:"lte"'
+    },{
+            xtype: "textbox",
+            name: "supplierNo",
+            title: "供应商编号",
+            required:false,
+            readonly:false
+    },{
+            xtype: "textbox",
+            name: "storeNo",
+            title: "仓库",
+            required:false,
+            readonly:false
+    },{
+            xtype: "textbox",
+            name: "divisionNo",
+            title: "事业部",
+            required:false,
+            readonly:false
+    },{
+            xtype: "textbox",
+            name: "brandNo",
+            title: "品牌",
+            required:false,
+            readonly:false
+    },{
+            xtype: "textbox",
+            name: "factoryNo",
+            title: "厂区",
+            required:false,
+            readonly:false
+    },{
+            xtype: "textbox",
+            name: "sendBillNo",
+            title: "内部送货单号",
+            required:false,
+            readonly:false
+    },{
+            xtype: "combobox",
+            name: "printCount",
+            title: "打印状态",
+            options:'spType:"gte",multiple:true,valueField:"value",textField:"label",data:[{label: "打印",value: "1"},{label: "未打印",value: "0"}]'
+    }],
+    gridConfig:[{
+    	defaultLoad:false,
+        id:"masterGrid",
+        idName:"billNo",
+        moduleName:"bl_po_del",
+        xtype:"grid",
+        columns:[[
+        	{field:"billStatus",title:"单据状态",width:100,sortable:true,
+        		filterConfig:{
+                    "type":"combobox",
+                    "data":"$.eyd.demo.blpodel.billStatusData",
+                    "valueField" : "itemCode",
+                    "textField" : "itemName",
+                    "filterOperator":"equal"
+	            },
+	            formatter:'function(val,item){ if(val == "10"){return "制单";}else{return "审核";}}'
+	        },
+        	{field:"billNo",title:"单据编号",width:120,sortable:true},
+        	{field:"supplierNo",title:"供应商编号",width:100,sortable:true},
+        	{field:"divisionNo",title:"事业部",width:150,sortable:true},
+        	{field:"brandNo",title:"品牌",width:150,sortable:true},
+        	{field:"storeNo",title:"仓库",width:150,sortable:true},
+        	{field:"factoryNo",title:"厂区",width:150,sortable:true},
+            {field:"purMode",title:"做单方式",width:100,sortable:true,
+				filterConfig:{
+                    "type":"combobox",
+                    "data":[{"id":"0","text":"选择做单"},{"id":"1","text":"导入做单"}],
+                    "valueField" : "id",
+                    "textField" : "text",
+                    "filterOperator":"equal"
+	            },
+	            formatter:'function(val,item){if(val == "1"){return "导入做单";}else{return "选择做单";}}'
+			},
+			{field:"sendBillNo",title:"内部送货单号",width:120},
+			{field:"printCount",title:"打印状态",width:100,sortable:true,
+				filterConfig:{
+                    "type":"combobox",
+                    "data":[{"id":"1","text":"已打印"},{"id":"0","text":"未打印"}],
+                    "valueField" : "id",
+                    "textField" : "text",
+                    "filterOperator":"gte"
+	            },
+	            formatter:'function(val,item){if(val >= 1){return "已打印";}else{return "未打印";}}'
+			},
+			{field:"remarks",title:"备注",width:100},
+			{field:"creator",title:"创建人",width:100},
+            {field:"createTime",title:"创建日期",width:150},
+            {field:"auditor",title:"审核人",width:100},
+            {field:"auditTime",title:"审核时间",width:150}
+        ]],
+        options:'details:["bl_po_del_dtl","bl_po_del_dtl2"]',
+        queryParams:{},
+        loadUrl:"/bl_po_del/find.json",
+        localhost:"",
+        saveUrl:"/bl_po_del/deleteBill.json",
+        exportUrl:""
+    }]
+}

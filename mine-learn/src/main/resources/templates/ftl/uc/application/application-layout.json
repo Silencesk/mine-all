@@ -1,0 +1,177 @@
+{
+    pageType: "BaseSimplePage",
+    searchItems: [{
+            id:"prjId",
+            xtype: "combobox",
+            name: "prjId",
+            title: "所属项目",
+            required:false,
+            readonly:false,
+            data:"$.eyd.uc.application.projectsData",
+            valueField: "itemCode",
+            textField:"itemName"
+    },{
+            id:"appCode",
+            xtype: "textbox",
+            name: "appCode",
+            title: "应用编号",
+            required:false,
+            readonly:false
+    },{
+            id:"appName",
+            xtype: "textbox",
+            name: "appName",
+            title: "应用名称",
+            required:false,
+            readonly:false
+    },{
+            id:"status",
+            xtype: "combobox",
+            name: "status",
+            title: "状态",
+            required:false,
+            readonly:false,
+            options:'spType:"in",multiple:false,valueField:"value",textField:"label",data:[{label: "启用",value: "normal"},{label: "禁用",value: "blocked"}]'
+    }],
+    gridConfig:[{
+    	defaultLoad:false,
+        id:"masterGrid",
+        idName:"appCode",
+        moduleName:"application",
+        xtype:"grid",
+        columns:[[  
+       		 {field:"prjId",title:"项目ID",width:100,hidden:true},
+       		 {field:"prjName",title:"项目名称",width:100,sortable:true,
+       		 editor:{
+								"type" : "searchbox",
+								"options" : {
+									"showWin" : true,
+									"winConfing" : {
+										"returnValues" : [{"field":"prjId","map":"id"},"prjName" ],
+										"searchItems" : [ {
+											"type": "textbox",
+											"title": "项目编号",
+											"name": "prjCode"
+										},{
+											"type": "textbox",
+											"title": "项目名称",
+											"name": "prjName"
+										} ],
+										"gridConfig" : {
+											"url" : "/project/find.json",
+											"columns" : [ [ {
+												"field":"id",
+								    			"title":"项目ID",
+								    			"width":100,
+								    			"sortable":true
+											},{
+								    			"width":100,
+								    			"sortable":true,
+												"title": "项目编号",
+												"field": "prjCode"
+											},{
+												"field":"prjName",
+								    			"title":"项目名称",
+								    			"width":100,
+								    			"sortable":true
+											}] ]
+										}
+									}
+								}
+				},
+        		filterConfig:{
+                    "type":"searchbox",
+                    "options" : {
+									"showWin" : true,
+									"winConfing" : {
+										"returnValues" : ["prjName" ],
+										"searchItems" : [ {
+											"type": "textbox",
+											"title": "项目编号",
+											"name": "prjCode"
+										},{
+											"type": "textbox",
+											"title": "项目名称",
+											"name": "prjName"
+										} ],
+										"gridConfig" : {
+											"url" : "/project/find.json",
+											"columns" : [ [ {
+												"field":"id",
+								    			"title":"项目ID",
+								    			"width":100,
+								    			"sortable":true
+											},{
+								    			"width":100,
+								    			"sortable":true,
+												"title": "项目编号",
+												"field": "prjCode"
+											},{
+												"field":"prjName",
+								    			"title":"项目名称",
+								    			"width":100,
+								    			"sortable":true
+											}] ]
+										}
+									}
+								},
+                    "filterOperator":"equal"
+	            }
+	        },
+        	{field:"appCode",title:"应用编号",width:100,sortable:true,
+	        	editor:{
+	        		type:"textbox",
+	        		options:{required:true}
+	        	}
+        	},
+        	{field:"appName",title:"应用名称",width:100,sortable:true,
+        	editor:{
+	        		type:"textbox",
+	        		options:{required:true}
+	        	}
+        	},
+			{field:"appUrl",title:"应用地址",width:100,sortable:true,
+        	editor:{
+	        		type:"textbox",
+	        		options:{required:true}
+	        	}
+        	},
+			{
+            	field:"status",
+            	title:"状态",
+            	width:100,
+            	sortable:true,
+            	defaultValue:"normal",
+            	formatter:'function(val,item){if(val == "normal"){return "启用"}return "禁用";}',
+				"filterConfig":{
+	                                    "type":"combobox",
+	                                    "data":[{label: '启用',value: 'normal'},{label: '禁用',value: 'blocked'}],
+	                                    "comboboxData":[{label: '启用',value: 'normal'},{label: '禁用',value: 'blocked'}],
+	                                    "valueField" : "value",
+	                                    "textField" : "label",
+	                                    "filterOperator":"equal"
+	            },
+            	editor: {
+							type:"combobox",
+							options:{
+								required:true,
+								"data":[{label: '启用',value: 'normal'},{label: '禁用',value: 'blocked'}],
+	                             "valueField" : "value",
+	                             "textField" : "label"
+							}
+						}					
+			},
+			{field:"remarks",title:"备注",width:100,sortable:true,editor:"textbox"},
+			{field:"creator",title:"创建人",width:100},
+            {field:"createTime",title:"创建日期",width:150},
+            {field:"modifier",title:"修改人",width:100},
+            {field:"modifyTime",title:"修改时间",width:150}
+        ]],
+        options:'primaryKeys:["appCode"]',
+        queryParams:{},
+        loadUrl:"/application/find.json",
+        localhost:"",
+        saveUrl:"/application/save.json",
+        exportUrl:""
+    }]
+}

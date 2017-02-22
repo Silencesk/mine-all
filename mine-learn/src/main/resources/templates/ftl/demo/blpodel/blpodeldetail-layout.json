@@ -1,0 +1,302 @@
+{
+  "pageType": "BillDetailPage",
+  "editorForm": [
+    {
+      "tableType": "master",
+      "title": "",
+      "items": [
+        {
+          "id": "billNo",
+          "xtype": "textbox",
+          "name": "billNo",
+          "title": "单据编号",
+          "required": false,
+          "readonly": true
+        },
+        {
+          "xtype": "combobox",
+          "name": "purMode",
+          "title": "做单方式",
+          "required": false,
+          "readonly": false,
+           options:'valueField:"value",textField:"label",data:[{label: "选择做单",value: "0"},{label: "导入做单",value: "1"}]'
+        },
+        {
+          "xtype": "textbox",
+          "name": "supplierNo",
+          "title": "供应商编号",
+          "required": false,
+          "readonly": false
+        },
+        {
+          "xtype": "textbox",
+          "name": "storeNo",
+          "title": "仓库",
+          "required": false,
+          "readonly": false
+        },
+        {
+          "xtype": "textbox",
+          "name": "divisionNo",
+          "title": "事业部",
+          "required": false,
+          "readonly": false
+        },
+        {
+          "xtype": "textbox",
+          "name": "brandNo",
+          "title": "品牌",
+          "required": false,
+          "readonly": false
+        },
+        {
+          "xtype": "textbox",
+          "name": "factoryNo",
+          "title": "厂区",
+          "required": false,
+          "readonly": false
+        },
+        {
+          "xtype": "textbox",
+          "name": "sendBillNo",
+          "title": "内部送货单号",
+          "required": false,
+          "readonly": false
+        },
+        {
+          "xtype": "textbox",
+          "name": "remarks",
+          "title": "备注",
+          "required": false,
+          "readonly": false
+        }
+      ]
+    }
+  ],
+  "gridConfig": [
+    {
+      "defaultLoad": false,
+      "id": "Grid",
+      "index": "1",
+      "gridCount": "2",
+      "title":"明细1",
+      "moduleName": "bl_po_del_dtl",
+      "xtype": "grid",
+      "idName": "billNo",
+       masterFields:["billNo","divisionNo"],
+      "columns": [
+        [
+          {
+            "field": "orderNo",
+            "title": "序号",
+            "width": 100,
+            "sortable": true,
+            "editor": {
+              "type": "textbox",
+              "options": {
+                "required": true
+              }
+            }
+          },
+          {
+            "field": "billNo",
+            "title": "单据编号",
+            "width": 120,
+            "sortable": true,
+            "hidden": true
+          },
+          {
+            "field": "divisionNo",
+            "title": "事业部编号",
+            "width": 150,
+            "sortable": true,
+            "hidden": true
+          },
+          {
+            "field": "materialNo",
+            "title": "物料编号",
+            "width": 100,
+            "sortable": true,
+            "editor": {
+              "type": "textbox",
+              "options": {
+                "required": true
+              }
+            }
+          },
+          {
+            "field": "sizeNo",
+            "title": "尺码",
+            "width": 100,
+            "sortable": true,
+            "editor": {
+              "type": "textbox",
+              "options": {
+                "required": true
+              }
+            }
+          },
+          {
+            "field": "outQty",
+            "title": "送货数量",
+            "width": 100,
+            "sortable": true,
+            "editor": {
+              "type": "textbox",
+              "options": {
+                "required": true
+              }
+            }
+          },
+          {
+            "field": "cost",
+            "title": "费用",
+            "width": 100,
+            "sortable": true,
+            "editor": {
+              "type": "textbox",
+              "options": {
+                "required": true
+              }
+            }
+          },
+          {
+            "field": "normalUnit",
+            "title": "基本单位",
+            "width": 100,
+            "sortable": true,
+            "editor": {
+              "type": "textbox",
+              "options": {
+                "required": true
+              }
+            }
+          },
+          {
+            "field": "remarks",
+            "title": "备注",
+            "width": 100,
+            "sortable": true
+          }
+        ]
+      ],
+      "queryParams": {},
+      "loadUrl": "/bl_po_del_dtl/find.json",
+      "localhost": "",
+      "saveUrl": "/bl_po_del_dtl/save.json",
+      "exportUrl": ""
+    },
+    {
+      "defaultLoad": false,
+      "id": "Grid",
+      "index": "2",
+      "gridCount": "2",
+      "title":"明细2",
+      "moduleName": "bl_po_del_dtl2",
+      "xtype": "grid",
+      "idName": "billNo",
+       masterFields:["billNo","divisionNo"],
+      "columns": [
+        [
+          {
+            "field": "orderNo",
+            "title": "序号",
+            "width": 100,
+            "sortable": true,
+            "editor": {
+              "type": "textbox",
+              "options": {
+                "required": true
+              }
+            }
+          },
+          {
+            "field": "billNo",
+            "title": "单据编号",
+            "width": 120,
+            "sortable": true,
+            "hidden": true
+          },
+          {
+            "field": "divisionNo",
+            "title": "事业部编号",
+            "width": 150,
+            "sortable": true,
+            "hidden": true
+          },
+          {
+            "field": "materialNo",
+            "title": "物料编号",
+            "width": 100,
+            "sortable": true,
+            "editor": {
+              "type": "textbox",
+              "options": {
+                "required": true
+              }
+            }
+          },
+          {
+            "field": "sizeNo",
+            "title": "尺码",
+            "width": 100,
+            "sortable": true,
+            "editor": {
+              "type": "textbox",
+              "options": {
+                "required": true
+              }
+            }
+          },
+          {
+            "field": "outQty",
+            "title": "送货数量",
+            "width": 100,
+            "sortable": true,
+            "editor": {
+              "type": "textbox",
+              "options": {
+                "required": true
+              }
+            }
+          },
+          {
+            "field": "cost",
+            "title": "费用",
+            "width": 100,
+            "sortable": true,
+            "editor": {
+              "type": "textbox",
+              "options": {
+                "required": true
+              }
+            }
+          },
+          {
+            "field": "normalUnit",
+            "title": "基本单位",
+            "width": 100,
+            "sortable": true,
+            "editor": {
+              "type": "textbox",
+              "options": {
+                "required": true
+              }
+            }
+          },
+          {
+            "field": "remarks",
+            "title": "备注",
+            "width": 100,
+            "sortable": true
+          }
+        ]
+      ],
+      "queryParams": {},
+      "loadUrl": "/bl_po_del_dtl2/find.json",
+      "localhost": "",
+      "saveUrl": "/bl_po_del_dtl2/save.json",
+      "exportUrl": ""
+    }
+  ]
+}

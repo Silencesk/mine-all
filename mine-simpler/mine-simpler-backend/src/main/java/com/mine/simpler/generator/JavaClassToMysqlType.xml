@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Java与MySql数据类型对照表 -->
+<table cellspacing="0" cellpadding="0" border="1" align="center">
+	<thead>
+		<tr>
+			<td width="105" name="mysqltype" valign="center">
+				<p align="center">类型名称</p>
+			</td>
+			<td width="80" valign="center">
+				<p align="center">显示长度</p>
+			</td>
+			<td width="184" valign="center">
+				<p align="center">数据库类型</p>
+			</td>
+			<td width="171" name="javaclass" valign="center">
+				<p align="center">JAVA类型</p>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td width="105" name="mysqltype" valign="center">
+				<p align="center">VARCHAR</p>
+			</td>
+			<td width="80" valign="center">
+				<p align="center">L+N</p>
+			</td>
+			<td width="184" valign="center">
+				<p align="center">VARCHAR</p>
+			</td>
+			<td width="171" name="javaclass" valign="center">
+				<p align="center">java.lang.String</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="105" name="mysqltype" valign="center">
+				<p align="center">CHAR</p>
+			</td>
+			<td width="80" valign="center">
+				<p align="center">N</p>
+			</td>
+			<td width="184" valign="center">
+				<p align="center">CHAR</p>
+			</td>
+			<td width="171" name="javaclass" valign="center">
+				<p align="center">java.lang.String</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="105" name="mysqltype" valign="center">
+				<p align="center">BLOB</p>
+			</td>
+			<td width="80" valign="center">
+				<p align="center">L+N</p>
+			</td>
+			<td width="184" valign="center">
+				<p align="center">BLOB</p>
+			</td>
+			<td width="171" name="javaclass" valign="center">
+				<p align="center">java.lang.byte[]</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="105" name="mysqltype" valign="center">
+				<p align="center">TEXT</p>
+			</td>
+			<td width="80" valign="center">
+				<p align="center">65535</p>
+			</td>
+			<td width="184" valign="center">
+				<p align="center">VARCHAR</p>
+			</td>
+			<td width="171" name="javaclass" valign="center">
+				<p align="center">java.lang.String</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="105" name="mysqltype" valign="center">
+				<p align="center">INTEGER</p>
+			</td>
+			<td width="80" valign="center">
+				<p align="center">4</p>
+			</td>
+			<td width="184" valign="center">
+				<p align="center">INTEGER  UNSIGNED
+				</p>
+			</td>
+			<td width="171" name="javaclass" valign="center">
+				<p align="center">java.lang.Long</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="105" name="mysqltype" valign="center">
+				<p align="center">TINYINT</p>
+			</td>
+			<td width="80" valign="center">
+				<p align="center">3</p>
+			</td>
+			<td width="184" valign="center">
+				<p align="center">TINYINT  UNSIGNED
+				</p>
+			</td>
+			<td width="171" name="javaclass" valign="center">
+				<p align="center">java.lang.Integer</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="105" name="mysqltype" valign="center">
+				<p align="center">SMALLINT</p>
+			</td>
+			<td width="80" valign="center">
+				<p align="center">5</p>
+			</td>
+			<td width="184" valign="center">
+				<p align="center">SMALLINT  UNSIGNED
+				</p>
+			</td>
+			<td width="171" name="javaclass" valign="center">
+				<p align="center">java.lang.Integer</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="105" name="mysqltype" valign="center">
+				<p align="center">MEDIUMINT</p>
+			</td>
+			<td width="80" valign="center">
+				<p align="center">8</p>
+			</td>
+			<td width="184" valign="center">
+				<p align="center">MEDIUMINT  UNSIGNED
+				</p>
+			</td>
+			<td width="171" name="javaclass" valign="center">
+				<p align="center">java.lang.Integer</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="105" name="mysqltype" valign="center">
+				<p align="center">BIT</p>
+			</td>
+			<td width="80" valign="center">
+				<p align="center">1</p>
+			</td>
+			<td width="184" valign="center">
+				<p align="center">BIT</p>
+			</td>
+			<td width="171" name="javaclass" valign="center">
+				<p align="center">java.lang.Boolean</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="105" name="mysqltype" valign="center">
+				<p align="center">BIGINT</p>
+			</td>
+			<td width="80" valign="center">
+				<p align="center">20</p>
+			</td>
+			<td width="184" valign="center">
+				<p align="center">BIGINT  UNSIGNED
+				</p>
+			</td>
+			<td width="171" name="javaclass" valign="center">
+				<p align="center">java.math.BigInteger</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="105" name="mysqltype" valign="center">
+				<p align="center">FLOAT</p>
+			</td>
+			<td width="80" valign="center">
+				<p align="center">4+8</p>
+			</td>
+			<td width="184" valign="center">
+				<p align="center">FLOAT</p>
+			</td>
+			<td width="171" name="javaclass" valign="center">
+				<p align="center">java.lang.Float</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="105" name="mysqltype" valign="center">
+				<p align="center">DOUBLE</p>
+			</td>
+			<td width="80" valign="center">
+				<p align="center">22</p>
+			</td>
+			<td width="184" valign="center">
+				<p align="center">DOUBLE</p>
+			</td>
+			<td width="171" name="javaclass" valign="center">
+				<p align="center">java.lang.Double</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="105" name="mysqltype" valign="center">
+				<p align="center">DECIMAL</p>
+			</td>
+			<td width="80" valign="center">
+				<p align="center">11</p>
+			</td>
+			<td width="184" valign="center">
+				<p align="center">DECIMAL</p>
+			</td>
+			<td width="171" name="javaclass" valign="center">
+				<p align="center">java.math.BigDecimal</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="105" name="mysqltype" valign="center">
+				<p align="center">BOOLEAN</p>
+			</td>
+			<td width="80" valign="center">
+				<p align="center">1</p>
+			</td>
+			<td width="184" valign="center">
+				<p align="center">同TINYINT</p>
+			</td>
+			<td width="171" name="javaclass" valign="center">
+				<p align="center">java.lang.Boolean</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="105" name="mysqltype" valign="center">
+				<p align="center">DATE</p>
+			</td>
+			<td width="80" valign="center">
+				<p align="center">10</p>
+			</td>
+			<td width="184" valign="center">
+				<p align="center">DATE</p>
+			</td>
+			<td width="171" name="javaclass" valign="center">
+				<p align="center">java.sql.Date</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="105" name="mysqltype" valign="center">
+				<p align="center">TIME</p>
+			</td>
+			<td width="80" valign="center">
+				<p align="center">8</p>
+			</td>
+			<td width="184" valign="center">
+				<p align="center">TIME</p>
+			</td>
+			<td width="171" name="javaclass" valign="center">
+				<p align="center">java.sql.Time</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="105" name="mysqltype" valign="center">
+				<p align="center">DATETIME</p>
+			</td>
+			<td width="80" valign="center">
+				<p align="center">19</p>
+			</td>
+			<td width="184" valign="center">
+				<p align="center">DATETIME</p>
+			</td>
+			<td width="171" name="javaclass" valign="center">
+				<p align="center">java.sql.Timestamp</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="105" name="mysqltype" valign="center">
+				<p align="center">TIMESTAMP</p>
+			</td>
+			<td width="80" valign="center">
+				<p align="center">19</p>
+			</td>
+			<td width="184" valign="center">
+				<p align="center">TIMESTAMP</p>
+			</td>
+			<td width="171" name="javaclass" valign="center">
+				<p align="center">java.sql.Timestamp</p>
+			</td>
+		</tr>
+	</tbody>
+</table>

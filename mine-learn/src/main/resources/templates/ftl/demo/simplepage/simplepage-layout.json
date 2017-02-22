@@ -1,0 +1,163 @@
+{
+    pageType: "BaseSimplePage",
+    searchItems: [{
+            id:"userCode",
+            xtype: "textbox",
+            name: "userCode",
+            title: "用户账号",
+            required:false,
+            readonly:false
+    },{
+            id:"userName",
+            xtype: "textbox",
+            name: "userName",
+            title: "用户名称",
+            required:false,
+            readonly:false
+    },{
+            id:"supplierType",
+            xtype: "combobox",
+            name: "email",
+            title: "邮箱",
+            required:false,
+            readonly:false,
+            options:'spType:"in",prompt:"请选择",multiple:true,valueField:"value",textField:"label",data:[{label: "java",value: "Java"},{label: "perl",value: "Perl"},{label: "ruby",value: "Ruby"}]'
+    },{
+            id:"supplierType",
+            xtype: "searchbox",
+            name: "userCode2",
+            title: "用户",
+            labelWidth:130,
+            required:false,
+            readonly:false,
+            options:'"showWin":"true","winConfing":{"returnValues" : [{"map":"userCode","field":"userCode2"}],"searchItems" : [{"type":"textbox","title":"用户编码","titleColWidth":4,"name":"userCode"}],"gridConfig" :{"url" : "/user/find.json","columns" : [[{"field" : "userCode","title" : "用户编码","width" : 230}]]}}'
+    },{
+            id:"startDate",
+            xtype: "datebox",
+            name: "createTime",
+            title: "创建日期",
+            labelWidth:100,
+            required:false,
+            readonly:false,
+            options:''
+    }],
+    gridConfig:[{
+    	defaultLoad:false,
+        id:"masterGrid",
+        idName:"supplierId",
+        moduleName:"模块名称",
+        xtype:"grid",
+        columns:[[  
+        	{field:"userCode",title:"用户账号",width:100,sortable:true,
+	        	editor:{
+	        		type:"textbox",
+	        		options:{required:true}
+	        	}
+        	},
+        	{field:"userName",title:"用户名称",width:100,sortable:true,
+        	editor:{
+	        		type:"textbox",
+	        		options:{required:true}
+	        	}
+        	},
+        	{field:"password",title:"password",width:100,sortable:true,
+        	editor:{
+	        		type:"textbox",
+	        		options:{required:true}
+	        	}
+        	},
+        	{field:"mobileNo",title:"手机",width:200,sortable:true,
+        	editor:{required:true,
+	        		type:"numberbox"
+	        	}
+        	},
+        	{field:"salt",title:"salt",width:100,sortable:true,
+        	editor:{
+	        		type:"textbox"
+	        	}
+        	},
+        	
+            {
+            	field:"admin",
+            	title:"是否管理员",
+            	width:200,
+            	sortable:true,
+				"filterConfig":{
+	                                    "type":"combobox",
+	                                    "data":[{"id":"true","text":"是"}],
+	                                    "comboboxData":[{"id":true,"text":"是"}],
+	                                    "valueField" : "id",
+	                                    "textField" : "text",
+	                                    "filterOperator":"equal"
+	            },
+            	editor: {
+							type:"combobox",
+							options:{
+								"data":[{"id":true,"text":"是"}],
+	                             "valueField" : "id",
+	                              "textField" : "text"
+							}
+						}					
+			},
+			{field:"email",title:"邮箱",width:200,
+			editor:{
+	        		type:"textbox",
+	        		options:{required:true}
+	        	}
+			},
+			{field:"creator",title:"创建人",width:200,editor:{
+	        		type:"textbox"
+	        	}},
+            {field:"modifier",title:"修改人",width:200,editor : {
+								"type" : "searchbox",
+								"options" : {
+									"showWin" : true,
+									"winConfing" : {
+										"returnValues" : ["modifier" ],
+										"searchItems" : [ {
+											"type": "textbox",
+											"title": "用户账号",
+											"name": "userCode"
+										} ],
+										"gridConfig" : {
+											"url" : "/user/find.json",
+											"columns" : [ [ {
+												"field":"id",
+								    			"title":"用户ID",
+								    			"width":100,
+								    			"sortable":true
+											},{
+												"field":"userName",
+								    			"title":"用户名",
+								    			"width":100,
+								    			"sortable":true
+											},{
+												"field":"email",
+								    			"title":"email",
+								    			"width":100,
+								    			"sortable":true
+											},{
+												"field":"modifier",
+								    			"title":"modifier",
+								    			"width":100,
+								    			"sortable":true
+											}] ]
+										}
+									}
+								}
+							}},
+            {field:"modifyTime",title:"修改时间",width:150,
+           
+			},
+            {field:"createTime",title:"创建日期",width:150,
+            
+            
+            }
+        ]],
+        queryParams:{},
+        loadUrl:"/user/find.json",
+        localhost:"",
+        saveUrl:"/user/save.json",
+        exportUrl:""
+    }]
+}

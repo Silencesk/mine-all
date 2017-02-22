@@ -1,0 +1,110 @@
+{
+    pageType: "MultiPage",
+    searchItems: [{
+            id:"dictCode",
+            xtype: "textbox",
+            name: "dictCode",
+            title: "字典编号",
+            required:false,
+            readonly:false,
+            options:'spType:"like"'
+    },{
+            id:"dictName",
+            xtype: "textbox",
+            name: "dictName",
+            title: "字典名称",
+            required:false,
+            readonly:false,
+            options:'spType:"like"'
+    }],
+    gridConfig:[{
+    	defaultLoad:false,
+        id:"Grid",
+        index:"1",
+        subGrids:["grid2"],
+        gridCount:"2",
+        idName:"dictId",
+        moduleName:"bas_dict",
+        xtype:"grid",
+        options:'primaryKeys:["dictCode"]',
+        columns:[[
+        	{field:"dictId",title:"字典Id",width:150,hidden:true},
+            {field:"dictCode",title:"字典编号",width:150,sortable:true,editor: {type:"textbox",options:{required:true}}	},
+			{field:"dictName",title:"字典名称",width:150,sortable:true,editor: {type:"textbox",options:{required:true}}},
+			{field:"dictLevel",title:"层级",width:150,sortable:true,editor: {type:"textbox",options:{required:true}}},
+			{field:"enableFlag",title:"启用状态",width:150,sortable:true,defaultValue:1,
+				filterConfig:{
+	                                    "type":"combobox",
+	                                    "data":[{"id":"1","text":"启用"},{"id":"0","text":"禁用"}],
+	                                    "valueField" : "id",
+	                                    "textField" : "text",
+	                                    "filterOperator":"equal"
+	            },
+	            editor: {type:"combobox",
+	            		options:{
+			            	required:true,
+			            	data:[{"id":"1","text":"启用"},{"id":"0","text":"禁用"}],
+		                    valueField : "id",
+		                    textField : "text"
+	            }},
+	            formatter:'function(val,item){if(val == "1"){return "启用";}else{return "禁用";}}'
+			},
+			{field:"orderNo",title:"排列序号",width:150,sortable:true,editor:"textbox"},
+			{field:"confirmFlag",title:"确认状态",width:150,sortable:true,
+				formatter:'function(val,item){if(val == "1"){return "已确认";}else{return "未确认";}}'
+			},
+			{field:"remarks",title:"备注",width:150,sortable:true,editor:"textbox"},
+			{field:"creator",title:"创建人",width:150,sortable:true},
+			{field:"createTime",title:"创建时间",width:150,sortable:true},
+			{field:"modifier",title:"修改人",width:150,sortable:true},
+			{field:"modifyTime",title:"修改时间",width:150,sortable:true}
+        ]],
+        queryParams:{},
+        loadUrl:"/bas_dict/find.json",
+        localhost:"",
+        saveUrl:"bas_dict/save.json",
+        exportUrl:""
+    },{
+    	defaultLoad:false,
+    	title:"选项卡名字",
+        id:"Grid2",
+        index:"2",
+        gridCount:"2",
+        moduleName:"bas_dict_dtl",
+        xtype:"grid",
+        options:'primaryKeys:["dictId","itemCode"]',
+        columns:[[
+        	{field:"dictId",title:"字典Id",width:150,hidden:true},
+            {field:"itemCode",title:"明细编号",width:150,sortable:true,editor: {type:"textbox",options:{required:true}}	},
+			{field:"itemName",title:"明细名称",width:150,sortable:true,editor: {type:"textbox",options:{required:true}}},
+			{field:"enableFlag",title:"启用状态",width:150,sortable:true,defaultValue:1,
+				filterConfig:{
+	                                    "type":"combobox",
+	                                    "data":[{"id":"1","text":"启用"},{"id":"0","text":"禁用"}],
+	                                    "valueField" : "id",
+	                                    "textField" : "text",
+	                                    "filterOperator":"equal"
+	            },
+            editor: {type:"combobox",
+	            		options:{
+			            	required:true,
+			            	data:[{"id":"1","text":"启用"},{"id":"0","text":"禁用"}],
+		                    valueField : "id",
+		                    textField : "text"
+	            }},
+	            formatter:'function(val,item){if(val == "1"){return "启用";}else{return "禁用";}}'
+			},
+			{field:"orderNo",title:"排列序号",width:150,sortable:true,editor:"textbox"},
+			{field:"remarks",title:"备注",width:150,sortable:true,editor:"textbox"},
+			{field:"creator",title:"创建人",width:150,sortable:true},
+			{field:"createTime",title:"创建时间",width:150,sortable:true},
+			{field:"modifier",title:"修改人",width:150,sortable:true},
+			{field:"modifyTime",title:"修改时间",width:150,sortable:true}
+        ]],
+        queryParams:{},
+        loadUrl:"/bas_dict_dtl/find.json",
+        localhost:"bas_dict_dtl",
+        saveUrl:"bas_dict_dtl/save.json",
+        exportUrl:""
+    }]
+}

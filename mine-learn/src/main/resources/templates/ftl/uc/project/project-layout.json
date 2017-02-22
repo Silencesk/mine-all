@@ -1,0 +1,85 @@
+{
+    pageType: "BaseSimplePage",
+    searchItems: [{
+            id:"prjCode",
+            xtype: "textbox",
+            name: "prjCode",
+            title: "项目编号",
+            required:false,
+            readonly:false,
+            spType:"like"
+    },{
+            id:"prjName",
+            xtype: "textbox",
+            name: "prjName",
+            title: "项目名称",
+            required:false,
+            readonly:false,
+            spType:"like"
+    },{
+            id:"status",
+            xtype: "combobox",
+            name: "status",
+            title: "状态",
+            required:false,
+            readonly:false,
+            options:'spType:"in",multiple:false,valueField:"value",textField:"label",data:[{label: "启用",value: "normal"},{label: "禁用",value: "blocked"}]'
+    }],
+    gridConfig:[{
+    	defaultLoad:false,
+        id:"masterGrid",
+        idName:"prjCode",
+        moduleName:"project",
+        xtype:"grid",
+        columns:[[  
+        	{field:"prjCode",title:"项目编号",width:100,sortable:true,
+	        	editor:{
+	        		type:"textbox",
+	        		options:{required:true}
+	        	}
+        	},
+        	{field:"prjName",title:"项目名称",width:100,sortable:true,
+        	editor:{
+	        		type:"textbox",
+	        		options:{required:true}
+	        	}
+        	},
+			{
+            	field:"status",
+            	title:"状态",
+            	width:100,
+            	sortable:true,
+            	defaultValue:"normal",
+            	formatter:'function(val,item){if(val == "normal"){return "启用"}return "禁用";}',
+				"filterConfig":{
+	                                    "type":"combobox",
+	                                    "data":[{label: '启用',value: 'normal'},{label: '禁用',value: 'blocked'}],
+	                                    "comboboxData":[{label: '启用',value: 'normal'},{label: '禁用',value: 'blocked'}],
+	                                    "valueField" : "value",
+	                                    "textField" : "label",
+	                                    "filterOperator":"equal"
+	            },
+            	editor: {
+							type:"combobox",
+							options:{
+								required:true,
+								"data":[{label: '启用',value: 'normal'},{label: '禁用',value: 'blocked'}],
+	                             "valueField" : "value",
+	                             "textField" : "label"
+							}
+						}					
+			},
+			{field:"remarks",title:"备注",width:100,sortable:true,editor:"textbox"},
+			{field:"creator",title:"创建人",width:100},
+            {field:"createTime",title:"创建日期",width:150},
+            {field:"modifier",title:"修改人",width:100},
+            {field:"modifyTime",title:"修改时间",width:150}
+        ]],
+        options:'primaryKeys:["prjCode"]',
+        queryParams:{},
+        loadUrl:"/project/find.json",
+        localhost:"",
+        saveUrl:"/project/save.json",
+        exportUrl:""
+    }]
+}

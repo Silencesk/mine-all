@@ -1,0 +1,3 @@
+<@eydForm.grid  id= "Grid" index= "1" gridCount= "3" defaultLoad= "true"  columns= '[[{"editor":{"options":{"required":true},"type":"datebox"},"field":"admin","width":200,"sortable":true,"title":"是否管理员","filterConfig":{"data":[{"id":"true","text":"是"}],"filterOperator":"equal","type":"combobox","valueField":"id","textField":"text"}},
+{field:"email",title:"youxiang",width:100,editor:"text"},
+			{field:"userCode",title:"供应商",width:200,sortable:true}]]' data='[]' loadUrl= "/user/find.json" pagination="true" queryParams= '{}' options="" moduleName= "模块名称" localhost="" saveUrl= "user/hs.json" exportUrl="" subGrids= '["grid2"]' idName= "email" />

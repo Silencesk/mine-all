@@ -1,0 +1,48 @@
+{
+    pageType: "BaseSimplePage",
+    searchItems: [{
+            id:"userCode",
+            xtype: "textbox",
+            name: "title",
+            title: "标题",
+            required:false,
+            readonly:false,
+            spType:"like"
+    },{
+            id:"status",
+            xtype: "combobox",
+            name: "versionNo",
+            title: "版本号",
+            required:false,
+            readonly:false,
+            options:'spType:"in",multiple:false,valueField:"value",textField:"label",data:[{label: "3.0",value: "3.0"}]'
+    }],
+    gridConfig:[{
+    	defaultLoad:false,
+        id:"masterGrid",
+        moduleName:"user",
+        xtype:"grid",
+        columns:[[  
+        	{
+        		field:"id",title:"ID",width:100,sortable:true
+        	},
+        	{
+        		field:"title",
+        		title:"标题",
+        		width:100,
+        		sortable:true
+        	},
+			{field:"versionNo",title:"版本号",width:100},
+			{field:"status",title:"启用状态",width:100},
+			{field:"versionDate",title:"发布日期",width:100},
+			{field:"creator",title:"创建人",width:100},
+            {field:"createTime",title:"创建日期",width:150},
+            {field:"modifier",title:"修改人",width:100},
+            {field:"modifyTime",title:"修改时间",width:150}
+        ]],
+        queryParams:{},
+        loadUrl:"/versionlog/find.json",
+        saveUrl:"/versionlog/save.json",
+        exportUrl:""
+    }]
+}

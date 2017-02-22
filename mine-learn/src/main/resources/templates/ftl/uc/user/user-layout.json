@@ -1,0 +1,126 @@
+{
+    pageType: "BaseSimplePage",
+    searchItems: [{
+            id:"userCode",
+            xtype: "textbox",
+            name: "userCode",
+            title: "用户账号",
+            required:false,
+            readonly:false,
+            spType:"like"
+    },{
+            id:"userName",
+            xtype: "textbox",
+            name: "userName",
+            title: "用户名称",
+            required:false,
+            readonly:false,
+            spType:"like"
+    },{
+            id:"status",
+            xtype: "combobox",
+            name: "status",
+            title: "状态",
+            required:false,
+            readonly:false,
+            options:'spType:"in",multiple:false,valueField:"value",textField:"label",data:[{label: "启用",value: "normal"},{label: "禁用",value: "blocked"}]'
+    }],
+    gridConfig:[{
+    	defaultLoad:false,
+        id:"masterGrid",
+        idName:"userCode",
+        moduleName:"user",
+        xtype:"grid",
+        columns:[[  
+        	{field:"userCode",title:"用户账号",width:100,sortable:true,
+	        	editor:{
+	        		type:"textbox",
+	        		options:{required:true}
+	        	}
+        	},
+        	{field:"userName",title:"用户名称",width:100,sortable:true,
+        	editor:{
+	        		type:"textbox",
+	        		options:{required:true}
+	        	}
+        	},
+			{field:"password",title:"当前密码",width:230,sortable:true,hidden:true},
+        	{field:"newPassword",title:"密码",width:230,sortable:true,
+	        	editor:{
+		        		type:"textbox"
+		        },
+		        formatter:'function(value, row) {return value ? value:row.password;}'
+			},
+        	{field:"mobileNo",title:"手机号",width:100,sortable:true,
+        	editor:{
+	        		type:"numberbox",
+	        		options:{required:true}
+	        	}
+        	},
+        	{field:"email",title:"邮箱",width:150,
+				editor:{
+	        		type:"textbox",
+	        		options:{required:true}
+	        	}
+			},
+			{
+            	field:"status",
+            	title:"状态",
+            	width:100,
+            	sortable:true,
+            	defaultValue:1,
+            	formatter:'function(val,item){if(val == "normal"){return "启用"}return "禁用";}',
+				"filterConfig":{
+	                                    "type":"combobox",
+	                                    "data":[{label: '启用',value: 'normal'},{label: '禁用',value: 'blocked'}],
+	                                    "comboboxData":[{label: '启用',value: 'normal'},{label: '禁用',value: 'blocked'}],
+	                                    "valueField" : "value",
+	                                    "textField" : "label",
+	                                    "filterOperator":"equal"
+	            },
+            	editor: {
+							type:"combobox",
+							options:{
+								required:true,
+								"data":[{label: '启用',value: 'normal'},{label: '禁用',value: 'blocked'}],
+	                             "valueField" : "value",
+	                             "textField" : "label"
+							}
+						}					
+			},
+            {
+            	field:"admin",
+            	title:"是否管理员",
+            	width:100,
+            	sortable:true,
+            	hidden:true,
+            	formatter:'function(val,item){if(val == "true"){return "是"}return "否";}',
+				filterConfig:{
+	                                    "type":"combobox",
+	                                    "data":[{"id":"true","text":"是"}],
+	                                    "comboboxData":[{"id":"true","text":"是"}],
+	                                    "valueField" : "id",
+	                                    "textField" : "text",
+	                                    "filterOperator":"equal"
+	            },
+            	editor: {
+							type:"combobox",
+							options:{
+								"data":[{"id":"true","text":"是"}],
+	                             "valueField" : "id",
+	                              "textField" : "text"
+							}
+						}					
+			},
+			{field:"creator",title:"创建人",width:100},
+            {field:"createTime",title:"创建日期",width:150},
+            {field:"modifier",title:"修改人",width:100},
+            {field:"modifyTime",title:"修改时间",width:150}
+        ]],
+        queryParams:{},
+        loadUrl:"/user/find.json",
+        localhost:"",
+        saveUrl:"/user/save.json",
+        exportUrl:""
+    }]
+}

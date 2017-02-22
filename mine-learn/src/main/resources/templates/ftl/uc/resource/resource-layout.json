@@ -1,0 +1,134 @@
+{
+    pageType: "BaseSimplePage",
+    searchItems: [{
+            id:"resCode",
+            xtype: "textbox",
+            name: "resCode",
+            title: "模块编号",
+            required:false,
+            readonly:false,
+            spType:"like"
+    },{
+            id:"resName",
+            xtype: "textbox",
+            name: "resName",
+            title: "模块名称",
+            required:false,
+            readonly:false,
+            spType:"like"
+    },{
+            id:"status",
+            xtype: "combobox",
+            name: "status",
+            title: "状态",
+            required:false,
+            readonly:false,
+            spType:"in",
+            multiple:true,
+            data:"$.eyd.uc.resource.statusData",
+            valueField: "itemCode",
+            textField:"itemName"
+    },{
+            id:"appCode",
+            xtype: "textbox",
+            name: "appCode",
+            title: "所属应用",
+            required:false,
+            readonly:false,
+            spType:"like"
+    },{
+            id:"prjCode",
+            xtype: "textbox",
+            name: "prjCode",
+            title: "所属项目",
+            required:false,
+            readonly:false,
+            spType:"like"
+    }],
+    gridConfig:[{
+    	defaultLoad:false,
+        id:"masterGrid",
+        idName:"userCode",
+        moduleName:"user",
+        xtype:"grid",
+        columns:[[  
+        	{field:"id",title:"编号",width:100,sortable:true,
+	        	editor:{
+	        		type:"textbox",
+	        		options:{required:true}
+	        	}
+        	},
+        	{field:"resCode",title:"资源编码",width:100,sortable:true,
+	        	editor:{
+	        		type:"textbox",
+	        		options:{required:true}
+	        	}
+        	},
+        	{field:"resName",title:"资源名称",width:100,sortable:true,
+	        	editor:{
+		        		type:"textbox",
+		        		options:{required:true}
+		        	}
+        	},
+			{field:"resUrl",title:"资源URL",width:150,sortable:true,
+				editor:{
+		        	type:"textbox",
+		        	options:{required:false}
+		        }
+	        },
+        	{field:"appCode",title:"所属应用",width:100,sortable:true,
+	        	editor:{
+		        	type:"textbox",
+		        	options:{required:true}
+		        }
+			},
+        	{field:"prjCode",title:"所属项目",width:100,sortable:true,
+        		editor:{
+	        		type:"textbox",
+	        		options:{required:true}
+	        	}
+        	},
+        	{field:"rightValue",title:"权限值",width:100
+			},
+			{field:"hint",title:"热点信息",width:100,
+				editor:{
+	        		type:"textbox",
+	        		options:{required:false}
+	        	}
+			},
+			{field:"icon",title:"图标",width:100,
+				editor:{
+	        		type:"textbox",
+	        		options:{required:false}
+	        	}
+			},
+			{field:"status",title:"状态",width:100,
+				editor : {
+					type : "combobox",
+					options : {
+						required: true,
+						data : "$eyd.uc.resource.statusData",
+						valueField : "itemCode",
+						textField : "itemName"
+					}
+					
+					type:"combobox",
+							options:{
+								"data":[{"id":"true","text":"是"}],
+	                             "valueField" : "id",
+	                              "textField" : "text"
+							}
+				}
+			},
+			{field:"creator",title:"创建人",width:100},
+            {field:"createTime",title:"创建日期",width:150},
+            {field:"modifier",title:"修改人",width:100},
+            {field:"modifyTime",title:"修改时间",width:150}
+        ]],
+        queryParams:{},
+        loadUrl:"/resource/find.json",
+        localhost:"",
+        saveUrl:"/resource/save.json",
+        exportUrl:""
+    }]
+}

@@ -1,0 +1,1 @@
+<@eydForm.textbox id= "userCode" name= "userCode" value="" title= "用户账号" required= "false" labelClass="form-textbox-edit" inputClass="" colSpan=3  labelWidth=100 display="block" readonly= "false"   options="" />
