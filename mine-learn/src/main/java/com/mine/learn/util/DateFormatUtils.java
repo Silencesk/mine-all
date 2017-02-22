@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.regex.Pattern;
  
-public class DateFormatUtil {
+public class DateFormatUtils {
      
     @SuppressWarnings("finally")
     public static String FormatDate(String dateStr){
