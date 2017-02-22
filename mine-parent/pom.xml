@@ -2,18 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.4.0.RELEASE</version>
         <relativePath></relativePath>
     </parent>
-  
+
 	<groupId>com.mine</groupId>
-	<artifactId>mine-bom</artifactId>
+	<artifactId>mine-parent</artifactId>
 	<version>0.0.3-SNAPSHOT</version>
-	<name>mine-bom</name>
+	<name>mine-parent</name>
 	<packaging>pom</packaging>
 
 	<properties>
@@ -66,8 +66,8 @@
 				<artifactId>commons-lang3</artifactId>
 				<version>${commons-lang3.version}</version>
 			</dependency>
-			<dependency>  
-			    <groupId>commons-beanutils</groupId>  
+			<dependency>
+			    <groupId>commons-beanutils</groupId>
 			    <artifactId>commons-beanutils-core</artifactId>
 			    <version>${commons-beanutils-core.version}</version>
 			</dependency>
@@ -82,7 +82,7 @@
 			  <version>${httpclient.version}</version>
 			</dependency>
 			<!-- GENERAL UTILS end -->
-			
+
 			<!-- LOGGING begin -->
 			<!-- slf4j -->
 			<dependency>
@@ -90,23 +90,23 @@
 				<artifactId>slf4j-api</artifactId>
 				<version>${slf4j.version}</version>
 			</dependency>
-			<!--jul桥接 用来输出 Java Logging Framework (JUL) -->  
-			<dependency>  
-				<groupId>org.slf4j</groupId>  
-				<artifactId>jul-to-slf4j</artifactId>  
-				<version>${slf4j.version}</version>  
+			<!--jul桥接 用来输出 Java Logging Framework (JUL) -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jul-to-slf4j</artifactId>
+				<version>${slf4j.version}</version>
 			</dependency>
-			<!-- jcl桥接，用来输出 第三方Jakarta Commons Logging (JCL) -->  
-			<dependency>  
-				<groupId>org.slf4j</groupId>  
-				<artifactId>jcl-over-slf4j</artifactId>  
-				<version>${slf4j.version}</version>  
+			<!-- jcl桥接，用来输出 第三方Jakarta Commons Logging (JCL) -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jcl-over-slf4j</artifactId>
+				<version>${slf4j.version}</version>
 			</dependency>
-			<!-- log4j桥接，用来输出 JAR包中log4j Logging (log4j) -->  
-			<dependency>  
-				<groupId>org.slf4j</groupId>  
-				<artifactId>log4j-over-slf4j</artifactId>  
-				<version>${slf4j.version}</version>  
+			<!-- log4j桥接，用来输出 JAR包中log4j Logging (log4j) -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>log4j-over-slf4j</artifactId>
+				<version>${slf4j.version}</version>
 			</dependency>
 			<!-- logback -->
 			<dependency>
@@ -119,11 +119,11 @@
 				<artifactId>logback-classic</artifactId>
 				<version>${logback.version}</version>
 			</dependency>
-			<dependency>  
-				<groupId>ch.qos.logback</groupId>  
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
 				<artifactId>logback-access</artifactId>
 				<version>${logback.version}</version>
-			</dependency> 
+			</dependency>
 			<!-- 与spring的集成，需额外添加此依赖 ，用于web.xml注册监听.也可自写监听类实现logback与spring的集成 -->
 			<dependency>
 				<groupId>org.logback-extensions</groupId>
@@ -131,7 +131,7 @@
 				<version>0.1.2</version>
 			</dependency>
 			<!-- LOGGING end -->
-			
+
 			<!-- POI begin -->
 	    	<dependency>
 	            <groupId>org.apache.poi</groupId>
@@ -149,7 +149,7 @@
 	            <version>${poi-ooxml-schemas.version}</version>
 	    	</dependency>
 	    	<!-- POI end -->
-			
+
 			<dependency>
 				<groupId>com.alibaba</groupId>
 				<artifactId>fastjson</artifactId>
@@ -173,7 +173,7 @@
             </dependency>
 		</dependencies>
 	</dependencyManagement>
-	
+
 	<!-- 插件配置 -->
 	<build>
 		<pluginManagement>
@@ -345,13 +345,13 @@
 		<snapshotRepository>
 			<id>user-snapshot</id>
 			<name>User Porject Snapshot</name>
-			<url>http://nexus.belle.cn:8081/nexus/content/repositories/snapshots/</url>
+			<url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
 			<uniqueVersion>true</uniqueVersion>
 		</snapshotRepository>
 		<repository>
 			<id>user-release</id>
 			<name>User Porject Release</name>
-			<url>http://nexus.belle.cn:8081/nexus/content/repositories/releases/</url>
+			<url>http://localhost:8081/nexus/content/repositories/releases/</url>
 		</repository>
 	</distributionManagement>
 </project>
