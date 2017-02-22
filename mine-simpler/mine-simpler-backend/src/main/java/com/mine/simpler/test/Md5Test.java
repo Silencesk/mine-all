@@ -1,6 +1,6 @@
 package com.mine.simpler.test;
 
-import com.mine.core.utils.CommonUtil;
+import com.mine.core.util.CommonUtil;
 
 public class Md5Test {
 	public static void main(String[] args){

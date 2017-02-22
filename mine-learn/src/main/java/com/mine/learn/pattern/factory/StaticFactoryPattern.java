@@ -3,7 +3,7 @@ package com.mine.learn.pattern.factory;
 import java.util.List;
 import java.util.Random;
 
-import com.mine.core.utils.ClassUtil;
+import com.mine.core.util.ClassUtils;
 import com.mine.learn.pattern.singleton.HumanActionFacade;
 
 /**
@@ -46,7 +46,7 @@ public class StaticFactoryPattern {
 	@SuppressWarnings("rawtypes")
 	private static void getRandomPerson(){
 		System.out.println("-----getRandomPerson-start-----");
-		List<Class> humanClasses = ClassUtil.getAllClassesByInterface(Human.class);
+		List<Class> humanClasses = ClassUtils.getAllClassesByInterface(Human.class);
 		
 		if(humanClasses!=null && humanClasses.size()!=0){
 			int size = humanClasses.size();

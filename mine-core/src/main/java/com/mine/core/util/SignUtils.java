@@ -1,4 +1,4 @@
-package com.mine.core.utils;
+package com.mine.core.util;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -6,7 +6,7 @@ import java.security.NoSuchAlgorithmException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.mine.core.constans.SysConstans;
+import com.mine.core.constan.SysConstans;
 
 public class SignUtils {
 	private static Logger logger = LoggerFactory.getLogger(SignUtils.class);

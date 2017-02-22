@@ -2,7 +2,7 @@ package com.mine.simpler.test;
 
 import java.math.BigDecimal;
 
-import com.mine.core.utils.CommonUtil;
+import com.mine.core.util.CommonUtil;
 
 public class BigDecimalTest {
 

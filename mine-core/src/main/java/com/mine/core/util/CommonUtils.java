@@ -1,4 +1,4 @@
-package com.mine.core.utils;
+package com.mine.core.util;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -23,7 +23,6 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.beanutils.ConvertUtils;
 import org.apache.commons.beanutils.converters.BigDecimalConverter;
 import org.apache.commons.beanutils.converters.DateConverter;
@@ -39,22 +38,19 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.annotation.JSONField;
-import com.mine.core.constans.SysConstans;
+import com.mine.core.constan.SysConstans;
 import com.mine.core.vo.SystemUser;
 
-
 /**
- * 通用方法类
- * @author wugy
  *
  */
-public class CommonUtil {
+public class CommonUtils {
 	
-	private CommonUtil(){
+	private CommonUtils(){
 		
 	}
 	
-	private static Logger logger = LoggerFactory.getLogger(CommonUtil.class);
+	private static Logger logger = LoggerFactory.getLogger(CommonUtils.class);
 			
 	public static String app_sys="";
 	
@@ -540,7 +536,7 @@ public class CommonUtil {
 	 * @return
 	 */
 	public static String getHostUrlWithHttp() {
-		return "http://"+CommonUtil.getHostUrl();
+		return "http://"+ CommonUtils.getHostUrl();
 	}
 	
 	/**
@@ -597,7 +593,7 @@ public class CommonUtil {
 	 * @return
 	 */
 	public static boolean isExtension(String fileName,String extension) {
-		return (extension.equalsIgnoreCase(CommonUtil.getFileExtension(fileName)))? true:false;
+		return (extension.equalsIgnoreCase(CommonUtils.getFileExtension(fileName)))? true:false;
 	}
 	
 	/**

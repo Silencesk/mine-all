@@ -1,4 +1,4 @@
-package com.mine.learn.xuke;
+package com.mine.learn.xk;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Inherited;

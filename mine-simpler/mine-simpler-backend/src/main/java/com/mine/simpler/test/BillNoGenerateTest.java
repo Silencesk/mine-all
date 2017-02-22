@@ -9,8 +9,8 @@ import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.mine.core.utils.JsonUtils;
-import com.mine.core.utils.HttpUtil;
+import com.mine.core.util.JsonUtils;
+import com.mine.core.util.HttpUtil;
 
 public class BillNoGenerateTest {
 	static int M_SIZE=10;

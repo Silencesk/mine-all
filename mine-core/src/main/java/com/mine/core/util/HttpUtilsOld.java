@@ -1,4 +1,4 @@
-package com.mine.core.utils;
+package com.mine.core.util;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -32,14 +32,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * HTTP 请求工具类
  *
- * @author : liii modify by liu.t
- * @version : 1.0.0
- * @date : 2015/7/21
- * @see : TODO
  */
-public class HttpUtil {
+public class HttpUtilsOld {
     private static PoolingHttpClientConnectionManager connMgr;
     private static RequestConfig requestConfig;
     private static final int MAX_TIMEOUT = 7000;

@@ -1,4 +1,4 @@
-package com.mine.simpler.utils;
+package com.mine.simpler.util;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 
 import org.apache.commons.lang3.StringUtils;
 
-public class FileRelationUtil {
+public class FileRelationUtils {
 	
 	public static String getFileStrFromPath(String filePath){
 		String fileStr = "";

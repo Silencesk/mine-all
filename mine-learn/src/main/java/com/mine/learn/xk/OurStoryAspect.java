@@ -1,4 +1,4 @@
-package com.mine.learn.xuke;
+package com.mine.learn.xk;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class OurStoryAspect{
-	@Pointcut("@target(com.mine.learn.xuke.OurStoryAnnotation)")
+	@Pointcut("@target(com.mine.learn.xk.OurStoryAnnotation)")
 	public void targetPointCut(){};
 	
 	@Pointcut("execution(* firstChat())")

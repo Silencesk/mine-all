@@ -1,4 +1,4 @@
-package com.mine.learn.utils;
+package com.mine.core.vo;
 
 import lombok.Getter;
 import lombok.Setter;

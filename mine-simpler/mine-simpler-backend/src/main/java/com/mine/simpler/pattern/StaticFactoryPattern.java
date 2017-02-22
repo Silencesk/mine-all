@@ -3,7 +3,7 @@ package com.mine.simpler.pattern;
 import java.util.List;
 import java.util.Random;
 
-import com.mine.core.utils.ClassUtil;
+import com.mine.core.util.ClassUtil;
 
 /**
  * 

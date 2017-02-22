@@ -1,6 +1,6 @@
 package com.mine.simpler.test;
 
-import com.mine.simpler.utils.FileRelationUtil;
+import com.mine.simpler.util.FileRelationUtils;
 
 public class MenuListLoadErrorFind {
 
@@ -10,6 +10,6 @@ public class MenuListLoadErrorFind {
 	public static void main(String[] args) {
 		//读取文件内容
 		String filePath = "E:\\02-mine\\src\\main\\resources\\files\\menulist.json";
-		FileRelationUtil.getFileStrFromPath(filePath);
+		FileRelationUtils.getFileStrFromPath(filePath);
 	}
 }

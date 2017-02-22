@@ -1,14 +1,12 @@
 package com.mine.core.vo;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
 import java.io.Serializable;
 import java.util.Map;
 
-import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
-
 /**
- * 用户中心统一登陆对象 itgLoginUser的简化
- * @see com.belle.uc.dao.organization.entity.ItgLoginUser
- * @author wu.gy
+ * 系统统一用户
  */
 public class SystemUser implements Serializable {
 	private static final long serialVersionUID = -8094604492554763459L;

@@ -1,4 +1,4 @@
-package com.mine.core.utils;
+package com.mine.core.util;
 
 import java.io.File;
 import java.io.IOException;
@@ -8,22 +8,10 @@ import java.util.Enumeration;
 import java.util.List;
 
 /**
- * 
- * Description: 类操作工具
- * All rights Reserved, Designed By BeLLE
- * Copyright:   Copyright(C) 2014-2015
- * Company:     Wonhigh.
- * author:      liutao
- * Createdate:  2015-10-3下午6:17:11
- *
- *
- * Modification  History:
- * Date         Author             What
- * ------------------------------------------
- * 2015-10-3     	liutao
+ * 类操作工具
  */
 @SuppressWarnings("rawtypes")
-public class ClassUtil {
+public class ClassUtils {
 	//返回接口的所有实现类
 	@SuppressWarnings("unchecked") 
 	public static List<Class> getAllClassesByInterface(Class c){

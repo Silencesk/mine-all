@@ -4,8 +4,7 @@ import java.lang.reflect.Field;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.mine.simpler.generator.XmlConfigUtils;
-import com.mine.core.utils.CommonUtil;
+import com.mine.core.util.CommonUtil;
 
 /**
  * Description: 通用VO查询代码生成辅助工具类

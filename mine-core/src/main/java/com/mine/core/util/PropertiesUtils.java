@@ -1,27 +1,16 @@
-package com.mine.core.utils;
+package com.mine.core.util;
 
-
-import java.util.Properties;
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Properties;
+
 /**
- * 读取配置文件的值
- * Description: 
- * All rights Reserved, Designed ByBeLLE
- * Copyright:   Copyright(C) 2014-2015
- * Company:     Wonhigh.
- * author:      peng.hz
- * Createdate:  2015-4-7下午5:24:45
- *
- *
- * Modification  History:
- * Date         Author             What
- * ------------------------------------------
- * 2015-4-7     	peng.hz
+ * 配置文件属性操作工具
  */
+
 public class PropertiesUtils {
 	
 	private PropertiesUtils(){

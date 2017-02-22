@@ -13,7 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.mine.simpler.enums.ImageType;
-import com.mine.simpler.utils.FileRelationUtil;
+import com.mine.simpler.util.FileRelationUtils;
 
 import net.sourceforge.tess4j.Tesseract;
 
@@ -27,7 +27,7 @@ public class Tess4jOCRTest {
 		String srcPath = "E:\\temp\\t1.png";
 		try {
 			//读取源图片与处理
-			String srcFormate = FileRelationUtil.getFileExtensionName(srcPath);
+			String srcFormate = FileRelationUtils.getFileExtensionName(srcPath);
 			File imageFile = null;
 			if(srcFormate.equalsIgnoreCase(ImageType.PNG.getType())){
 				imageFile = createImageOfNewFormat(srcPath, ImageType.JPG.getType());
@@ -45,7 +45,7 @@ public class Tess4jOCRTest {
 	}
 	
 	public static File createImageOfNewFormat(String srcPath, String formatName) throws Exception{
-		String srcFormate = FileRelationUtil.getFileExtensionName(srcPath);
+		String srcFormate = FileRelationUtils.getFileExtensionName(srcPath);
 		File imageFile = new File(srcPath);
 		String destPath = imageFile.getParent() + "\\tmp\\" + imageFile.getName().replace(srcFormate, formatName);
 		if(imageFile != null){

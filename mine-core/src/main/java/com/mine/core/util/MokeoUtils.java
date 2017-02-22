@@ -1,4 +1,4 @@
-package com.mine.core.utils;
+package com.mine.core.util;
 
 import com.mine.core.vo.SystemUser;
 

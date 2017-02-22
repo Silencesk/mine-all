@@ -1,4 +1,4 @@
-package com.mine.learn.xuke;
+package com.mine.learn.xk;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

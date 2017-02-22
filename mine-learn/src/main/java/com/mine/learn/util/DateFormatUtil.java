@@ -1,4 +1,4 @@
-package com.mine.learn.utils;
+package com.mine.learn.util;
  
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

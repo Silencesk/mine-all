@@ -1,4 +1,4 @@
-package com.mine.core.constans;
+package com.mine.core.constan;
 /**
  * 
  * Description: 系统常量

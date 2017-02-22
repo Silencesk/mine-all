@@ -1,4 +1,4 @@
-package com.mine.core.utils;
+package com.mine.core.util;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
