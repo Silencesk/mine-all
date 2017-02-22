@@ -24,10 +24,10 @@
         <dependencies>
             <dependency>
                 <groupId>com.mine</groupId>
-                <artifactId>mine-bom</artifactId>
+                <artifactId>mine-parent</artifactId>
                 <type>pom</type>
                 <scope>import</scope>
-                <version>${mine-bom.version}</version>
+                <version>${mine-parent.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
