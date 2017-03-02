@@ -58,7 +58,7 @@ public class TraceHighIOStd {
 [jstack-2.png](../images/jstack-2.png)
 * 得到线程tid的16进制数据nid `printf "%x\n" 8074`，此处结果`1f8a`  
 [jstack-3.png](../images/jstack-3.png)
-* 使用jstack查看进程pid堆栈内容 `jstack -l 8058`
+* 使用jstack查看进程pid堆栈内容 `jstack -l 8058`  
 [jstack-4.png](../images/jstack-4.png)
 * 在堆栈内容中找到前面查找出的nid的信息处，可直接定位到源码行
 * 参考：  
