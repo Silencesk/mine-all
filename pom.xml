@@ -13,7 +13,7 @@
         <module>mine-parent</module>
         <module>mine-core</module>
         <module>mine-learn</module>
-        <module>mine-simpler</module>
+        <!--<module>mine-simpler</module>-->
     </modules>
 
 

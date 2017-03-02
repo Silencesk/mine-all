@@ -130,7 +130,7 @@ public class HttpUtilsOld {
 
         try {
             httpPost.setConfig(requestConfig);
-            List<NameValuePair> pairList = new ArrayList<>(params.size());
+            List<NameValuePair> pairList = new ArrayList<NameValuePair>(params.size());
             for (Map.Entry<String, Object> entry : params.entrySet()) {
                 NameValuePair pair = new BasicNameValuePair(entry.getKey(), entry
                         .getValue().toString());

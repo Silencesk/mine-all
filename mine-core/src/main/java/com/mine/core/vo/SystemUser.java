@@ -45,7 +45,7 @@ public class SystemUser implements Serializable {
     private Integer isSuperAdmin;	//为超级管理员角色
     
     /**
-	 * 用户权限菜单 key=Url val=RightValue 格式：key:/blf1-mdm-web/basbrandrelation
+	 * 用户权限菜单 key=Url val=RightValue 格式：key:/blf1-mdm-core/basbrandrelation
 	 * val:127
 	 */
 	private Map<String, String> userMenuMap;
