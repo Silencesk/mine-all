@@ -10,12 +10,12 @@ import java.util.Set;
  */
 public class App 
 {
-    public static void main1( String[] args )
+    public static void main( String[] args )
     {
     	String intput = "i am a student";
         System.out.println(printWithNoSort(intput));
     }
-    
+
     static String printWithNoSort(String inStr){
     	if(null!=inStr && inStr.equals("")){
     		return "";
@@ -34,7 +34,7 @@ public class App
     		sb.append(" ").append(inArray[var]);
     		i++;
     	}
-    	
+
     	return sb.substring(1);
     }
 }
