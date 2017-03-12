@@ -1,4 +1,5 @@
 # 知识收集
+## 备忘
 ```
 -- programming learn list
 https://github.com/vhf/free-programming-books/blob/master/free-programming-books-zh.md
@@ -18,3 +19,6 @@ https://www.douban.com/doulist/44353472/
 -- 两周项目与文章总结
 https://www.douban.com/note/509894757/?type=like
 ```
+
+## 博客大家
+* [`花样的年华`](http://calvin1978.blogcn.com/)
