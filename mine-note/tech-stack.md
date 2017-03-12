@@ -33,7 +33,7 @@ docker容器
 3. 查看docker镜像 `docker images`
 4. 运行docker镜像，以eyd-register-center为例
   * 当前命令窗口启动，`docker run -p 10021:10021` ，ctr+c则会关闭运行
-  * 后台守护进程启动，`docker run --name register-center -d -p 10021:10021 172.20.32.132:5000/eyd/eyd-register-center`
+  * 后台守护进程启动，`docker run --name register-center -d -p 10021:10021 ip_addr:5000/eyd/eyd-register-center`
 5. 查看日志
   * `docker ps -a`
   * `docker logs -f $CONTAINER_ID` #查看docker实例运行日志，即时输出
@@ -48,7 +48,7 @@ docker容器
 2. 打包镜像并上传docker私服 `mvn clean package -Dmaven.test.skip=true -U docker:build -DpushImage`
 3. 打包镜像并将指定tag上传docker私服 `mvn clean package -Dmaven.test.skip=true -U docker:build -DpushImageTags -DdockerImageTag=latest` 未验证通过
 4. others
-  * set DOCKER_HOST=tcp://171.20.32.132:2375
+  * set DOCKER_HOST=tcp://ip_addr:2375
 5. problem
   * `Dockfile`中添加的jar包会带上版本，当应用程序版本进行变更的时候，也需要修改`Dockfile`文件
 6. 相关资料
@@ -100,9 +100,9 @@ docker容器
 ```
 cd /root/app_deploy
 sh app_deploy_st.sh -h
-sh app_deploy_st.sh -p bf-fstore-web -v 3.0.1.P1
+sh app_deploy_st.sh -p app_name -v 3.0.1.P1
 ```
-* 看3.0测试环境的运行情况
+* 测试环境的运行情况
 ```
 kubectl get pod --namespace=st-eyd -o wide
 kubectl get pod --namespace=kube-system -o wide
