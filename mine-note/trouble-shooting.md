@@ -9,7 +9,7 @@
 * feign调试关键代码  
 
 ````java
-INFO 8044 --- [io-20095-exec-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client bf-mdm-api initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=bf-mdm-api,current list of Servers=[172.20.32.126:20031],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;        Instance count:1;        Active connections count: 0;        Circuit breaker tripped count: 0;        Active connections per server: 0.0;]
+INFO 8044 --- [io-20095-exec-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client bf-mdm-api initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=xxx_app,current list of Servers=[172.20.32.126:20031],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;        Instance count:1;        Active connections count: 0;        Circuit breaker tripped count: 0;        Active connections per server: 0.0;]
 },Server stats: [[Server:172.20.32.126:20031;        Zone:defaultZone;        Total Requests:0;        Successive connection failure:0;        Total blackout seconds:0;        Last connection made:Thu Jan 01 08:00:00 CST 1970;        First connection made: Thu Jan 01 08:00:00 CST 1970;        Active Connections:0;        total failure count in last (1000) msecs:0;        average resp time:0.0;        90 percentile resp time:0.0;        95 percentile resp time:0.0;        min resp time:0.0;        max resp time:0.0;        stddev resp time:0.0]
 ]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@38f6beb
 
@@ -70,7 +70,7 @@ http://blog.csdn.net/kimylrong/article/details/52448589
 * 设置docker容器所使用的最大内存
 * 设置应用程序所能使用的最大运行内存与初始值, jvm调优
 ```
-java -Xms512m -Xmx2g -jar target/eyd-uc-web-3.0.2.RC2.jar --config.profile=mine
+java -Xms512m -Xmx2g -jar target/xxx_app.jar --config.profile=mine
 ```
 
 ##  markdown内联元素支持不友好
