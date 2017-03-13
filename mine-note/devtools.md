@@ -4,7 +4,7 @@
 * [atom](#atom)
 * [IntelliJ IEDA](#intellij-idea)
 
-## eclipse
+## eclipse·
 eclipse-neon，基于eclipse neon 4.6.1版本，并增加了符合我们工作环境的一些相关插件，具体列表如下
 * `biz.junginger.ExploreFS_1.0.0.jar` 右键文件定位
 * `lombok.jar` javabean 简化，参考[lombok](https://projectlombok.org/)
@@ -14,8 +14,18 @@ eclipse-neon，基于eclipse neon 4.6.1版本，并增加了符合我们工作�
 ## atom
 Atom是专门为程序员推出的一个跨平台文本编辑器。具有简洁和直观的图形用户界面，并有很多有趣的特点：支持CSS，HTML，JavaScript等网页编程语言。它支持宏，自动完成分屏功能，集成了文件管理器。  
 
+* [简介](http://www.open-open.com/lib/view/open1457082318187.html)
+* 安装插件慢，被墙，使用国内镜像。[参考](http://blog.csdn.net/dqliangjun/article/details/52075641)
+```
+-- 永久设置
+npm config set registry https://registry.npm.taobao.org
+-- 临时设置
+npm --registry "http://npm.hacknodejs.com/" install underscore
+```
+
+* [atom常用插件集合](https://github.com/kompasim/atom-plugins)
 * [快捷键](http://blog.csdn.net/crper/article/details/45674649)
-  * markdown效果预览`ctr+shift+m`
+  * markdown效果预览`ctr+shift+m`，可以在预览页面导出为html
   * 打开设置页`ctr+,`
   * 在打开的文件中快速定位文件`ctr+t`
   * 在当前编辑文件中定位方法`ctr+r`  
@@ -54,7 +64,7 @@ Atom是专门为程序员推出的一个跨平台文本编辑器。具有简洁�
  **ctrl+y 删除当前行**  
  **f2/shift+f2 定义下一个错误**  
  **ctrl+alt+o 优化导入的类和包**  
- 
+
 
 * 代码注释，[参考](https://my.oschina.net/baishi/blog/612641)
 ```java
@@ -65,7 +75,7 @@ Atom是专门为程序员推出的一个跨平台文本编辑器。具有简洁�
  */
 ```
 
- 
+
 * [安装lombok](http://blog.csdn.net/hinstenyhisoka/article/details/50468271)
 * [IDEA 环境常用设置整理](http://blog.csdn.net/lk_blog/article/details/43115903)
 * [IntelliJ IDEA 设置 编辑器字体大小背景色及快捷键](http://blog.csdn.net/lifuxiangcaohui/article/details/38822649)

@@ -21,6 +21,8 @@ https://www.douban.com/note/509894757/?type=like
 ```
 
 ## 博客大家
+### 后端
+* [并发编程网](http://ifeve.com/category/java/)
 * [`有孚-deepinmind`](http://it.deepinmind.com/)
 * [`廖雪峰`](http://www.liaoxuefeng.com/)
 * [`阮一峰的个人网站`](http://www.liaoxuefeng.com/)
@@ -38,4 +40,4 @@ https://www.douban.com/note/509894757/?type=like
 * [`许进沉思录-专注于云计算与物联网技术研究`](http://blog.xujin.org/)
 * [`ThoughtWorks洞见`](http://insights.thoughtworkers.org/)
 
-
+### 前端
