@@ -29,6 +29,7 @@ npm --registry "http://npm.hacknodejs.com/" install underscore
   * 打开设置页`ctr+,`
   * 在打开的文件中快速定位文件`ctr+t`
   * 在当前编辑文件中定位方法`ctr+r`  
+  * `shift+cmd+P`进入命令行模式
 
 
   英文 | 中文 | 快捷键

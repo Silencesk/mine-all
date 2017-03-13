@@ -21,23 +21,27 @@ https://www.douban.com/note/509894757/?type=like
 ```
 
 ## 博客大家
+### 综合
+* [**并发编程网**](http://ifeve.com/category/java/)
+* [*ThoughtWorks洞见*](http://insights.thoughtworkers.org/)
+
 ### 后端
-* [并发编程网](http://ifeve.com/category/java/)
-* [`有孚-deepinmind`](http://it.deepinmind.com/)
-* [`廖雪峰`](http://www.liaoxuefeng.com/)
-* [`阮一峰的个人网站`](http://www.liaoxuefeng.com/)
 * [`江南白衣-花样的年华`](http://calvin1978.blogcn.com/)
-* [`阿福 - 一个架构士的思考与沉淀`](http://afoo.me/)
-* [`博客 | 奔跑中的奶酪`](http://www.runningcheese.com/blog)
-* [`首页 - 美团点评技术团队`](http://tech.meituan.com/)
-* [`程序猿DD`](http://blog.didispace.com/)
-* [`酷 壳 – COOLSHELL`](http://coolshell.cn/)
-* [`漠然`](https://mritd.me/)
-* [`泥瓦匠BYSocket`](http://www.bysocket.com/)
-* [`纯洁的微笑`](http://www.ityouknow.com/)
-* [`刘未鹏 | Mind Hacks 思维改变生活`](http://mindhacks.cn/)
-* [`亦山的个人主页`](http://luanlouis.com/·)
-* [`许进沉思录-专注于云计算与物联网技术研究`](http://blog.xujin.org/)
-* [`ThoughtWorks洞见`](http://insights.thoughtworkers.org/)
+* [有孚-deepinmind](http://it.deepinmind.com/)
+* [廖雪峰](http://www.liaoxuefeng.com/)
+* [阮一峰的个人网站](http://www.liaoxuefeng.com/)
+* [阿福 - 一个架构士的思考与沉淀](http://afoo.me/)
+* [博客 | 奔跑中的奶酪](http://www.runningcheese.com/blog)
+* [*首页 - 美团点评技术团队*](http://tech.meituan.com/)
+* [程序猿DD](http://blog.didispace.com/)
+* [酷 壳 – COOLSHELL](http://coolshell.cn/)
+* [漠然](https://mritd.me/)
+* [泥瓦匠BYSocket](http://www.bysocket.com/)
+* [纯洁的微笑](http://www.ityouknow.com/)
+* [刘未鹏 | Mind Hacks 思维改变生活](http://mindhacks.cn/)
+* [亦山的个人主页](http://luanlouis.com/·)
+* [许进沉思录-专注于云计算与物联网技术研究](http://blog.xujin.org/)
 
 ### 前端
+* [Litten](http://litten.me/)
+* [imys](https://imys.net/)
