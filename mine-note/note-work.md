@@ -32,7 +32,7 @@ mvn dependency:tree
 <server>
   <id>thirdparty</id>
   <username>deployment</username>
-  <password><![CDATA[deployment@belle]]></password>
+  <password><![CDATA[deployment@xx]]></password>
 </server>
 --使用命令
 mvn -f ./eyd-uc-core clean

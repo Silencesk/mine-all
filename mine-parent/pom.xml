@@ -37,6 +37,7 @@
 		<druid.version>1.0.14</druid.version>
         <lombok.version>1.14.8</lombok.version>
 		<btrace.version>1.2.3</btrace.version>
+		<google.guava.version>17.0</google.guava.version>
 	</properties>
 
 	<!-- 依赖管理 -->
@@ -176,6 +177,12 @@
 				<groupId>com.sun.tools.btrace</groupId>
 				<artifactId>btrace-client</artifactId>
 				<version>${btrace.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${google.guava.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

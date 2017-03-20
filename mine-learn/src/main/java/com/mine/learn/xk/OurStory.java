@@ -6,13 +6,11 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @SpringBootApplication
-@EnableAspectJAutoProxy(proxyTargetClass=true)
+@EnableAspectJAutoProxy(proxyTargetClass=true, exposeProxy=true)
 public class OurStory{
-	
-    public static void main1(String[] args) {
+
+    public static void main(String[] args) {
     	ApplicationContext ctx = SpringApplication.run(OurStory.class, args);
-    	OurStoryService service = ctx.getBean(OurStoryService.class);
-    	service.firstChat();
     }
 
 }

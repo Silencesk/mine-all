@@ -39,7 +39,7 @@ https://www.douban.com/note/509894757/?type=like
 * [泥瓦匠BYSocket](http://www.bysocket.com/)
 * [纯洁的微笑](http://www.ityouknow.com/)
 * [刘未鹏 | Mind Hacks 思维改变生活](http://mindhacks.cn/)
-* [亦山的个人主页](http://luanlouis.com/·)
+* [亦山的个人主页](http://luanlouis.com/)
 * [许进沉思录-专注于云计算与物联网技术研究](http://blog.xujin.org/)
 
 ### 前端

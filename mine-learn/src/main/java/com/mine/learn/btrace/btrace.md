@@ -10,3 +10,6 @@
 ```
 
 * 根据btrace samples编写自己的btrace类
+
+* btrace无法拦截代理类
+
