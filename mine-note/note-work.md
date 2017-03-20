@@ -70,7 +70,8 @@ http://maven.oschina.net/content/groups/public
 alter table t_book rename to bbb;
 alter table bbb change nnnnn hh int;
 mysqldump -u root -p db_uc > db_uc.sql
-
+alter table users AUTO_INCREMENT=123456;
+ALTER TABLE user add COLUMN dept_no VARCHAR(10) AFTER phone;
 ```
 
 ## java
