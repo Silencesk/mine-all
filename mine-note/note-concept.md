@@ -17,3 +17,15 @@ try (Stream<User> stream = repository.findAllByCustomQueryAndStream()) {
 * linux下的top，`p`-按cpu使用率排序； `m`-按内存使用率排序
 * mac下的top，先输入`o`，然后输入：`cpu`-按cpu使用率排序；`rsize`-按内存使用率排序
 * 如果记不清了，可输入`?`，弹出帮助界面
+
+## 多线程
+- [happens-before俗解](http://ifeve.com/easy-happens-before/)
+> 如果线程1解锁了monitor a，接着线程2锁定了a，那么，线程1解锁a之前的写操作都对线程2可见（线程1和线程2可以是同一个线程）。
+>
+> 如果线程1写入了volatile变量v（这里和后续的“变量”都指的是对象的字段、类字段和数组元素），接着线程2读取了v，那么，线程1写入v及之前的写操作都对线程2可见（线程1和线程2可以是同一个线程）。
+- [**Java并发集合的实现原理**](http://www.cnblogs.com/luxiaoxun/p/4638748.html)
+> HashMap不是线程安全的。
+>
+>HashTable容器使用synchronized来保证线程安全，在线程竞争激烈的情况下HashTable的效率非常低下。
+>
+>ConcurrentHashMap采用了Segment分段技术，容器里有多把锁，每把锁用于锁容器其中一部分数据，那么当多线程访问容器里不同数据段的数据时，线程间就不会存在锁竞争，从而可以有效的提高并发访问效率。
