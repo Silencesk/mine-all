@@ -14,8 +14,10 @@
 2. 安装成功后，需要重启，效果图。图中所框图标，为jrebel方式run、debug启动  
 ![intall-jrebel-success](images/install-jrebel-success.png)
 3. 这时候的jrebel是没有进行注册的，需要进行注册。
-  * 访问https://my.jrebel.com/，可能需要翻墙，下面的操作也是。至于翻墙手段，可以使用[lantern](https://github.com/getlantern/lantern)。
-  * 通过facebook或twitter账户登录注册就可以获得免费的激活码  
+  * 访问[myJrebel](https://my.jrebel.com/)，可能需要翻墙，下面的操作也是
+  * 至于翻墙手段，可以使用[lantern](https://github.com/getlantern/lantern)。每月有700M的免费流量，如果不去youtobe，只是查查资料，也差不多够了
+  * 访问[myJrebel](https://my.jrebel.com/)，可能需要翻墙，下面的操作也是
+  * 通过facebook或twitter账户登录注册就可以获得免费的激活码
    ![my-jrebel-register-with-facebook](images/my-jrebel-register-with-facebook.png)
   * 如果你已有facebook或twitter，那就直接登录；如果没有，那就注册一个吧
   * 注册facebook，直接使用手机号进行注册。因使用邮箱的facebook还是需要手机号确认，才能注册生效的
