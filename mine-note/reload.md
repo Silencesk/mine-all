@@ -15,7 +15,7 @@
 ![intall-jrebel-success](images/install-jrebel-success.png)
 3. 这时候的jrebel是没有进行注册的，需要进行注册。
   * 访问[myJrebel](https://my.jrebel.com/)，可能需要翻墙，下面的操作也是 。
-  * 至于翻墙手段，可以使用[lantern](https://github.com/getlantern/lantern)。每月有700M的免费流量，如果不去youtobe，只是查查资料，也差不多够了
+  * 至于翻墙手段，可以使用[lantern。](https://github.com/getlantern/lantern)。每月有700M的免费流量，如果不去youtobe，只是查查资料，也差不多够了。需注意，只有在需要访问被墙的网站才运行lantern。
   * 访问[myJrebel](https://my.jrebel.com/)，可能需要翻墙，下面的操作也是
   * 通过facebook或twitter账户登录注册就可以获得免费的激活码
    ![my-jrebel-register-with-facebook](images/my-jrebel-register-with-facebook.png)
