@@ -18,6 +18,9 @@ https://www.douban.com/doulist/44353472/
 
 -- 两周项目与文章总结
 https://www.douban.com/note/509894757/?type=like
+
+-- awesome-java
+https://github.com/akullpp/awesome-java
 ```
 
 ## 博客大家
