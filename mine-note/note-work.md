@@ -57,6 +57,7 @@ http://maven.oschina.net/content/groups/public
 * E:\workProgram\Java\jdk1.7.0_71
 * C:\ProgramData\Oracle\Java\javapath
 * C:\Users\gekeo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs
+* 按照shit+右键【从此处打开cmd、复制当前文件路径】
 
 ## redis
 * LPUSH mylist "three"
