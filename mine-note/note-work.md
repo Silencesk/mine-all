@@ -124,6 +124,17 @@ ALTER TABLE logtest DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;    -- 修改�
  *
  */
  ```
+ ## IntelliJ IDEA
+* 快捷插入类注释，参考[使用 IntelliJ 的 Live Templates 功能](http://jingyan.baidu.com/article/48b558e32a22b57f38c09a18.html)
+```java
+# live template
+*
+ * $desc$<br>
+ * @author liutao
+ * $date$ $time$
+ */
+ ```
+ ![class-comments](images/class-comments.png)
 
  ## accont
  ```
