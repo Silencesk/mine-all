@@ -15,6 +15,11 @@
 + 文件从远程主机copy到当前系统 `scp -r local_folder remote_username@remote_ip:remote_folder`
 + kill -9 \`ps uxa|grep 10071|awk '{if($11 != "grep") {print $2}}'\`
 + netstat -ntlp
++ `timedatectl`常用系统时区
+* curl
+```shell
+curl -b 'Hm_lvt_32464c62d48217432782c817b1ae58ce=1495271852,1497521888; JSESSIONID=a3894a93-4337-4fce-833d-fe66e115f9e2' http://sfpp.sf-express.com/sfpp-frontend/public/innodetail.html?workId=1072
+```
 
 ## maven
 * 常用

@@ -33,9 +33,12 @@ public class CglibDanymicProxy implements MethodInterceptor {
 	@Override
 	public Object intercept(Object proxy, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
 		before();
-		Object result = methodProxy.invokeSuper(proxy, args);	//cglib的代理方法,保存了目标对象的信息,提供了调用目标对象方法的invokeSuper,
-//		Object result = methodProxy.invoke(proxy, args);		//这种方式便会循环调用代理类自身的方法了
-//		Object result = method.invoke(proxy, args);				//这种方式也是,其实际都是代理对象在调用自身的方法
+		// cglib的代理方法,保存了目标对象的信息,提供了调用目标对象方法的invokeSuper,
+		Object result = methodProxy.invokeSuper(proxy, args);
+		// 这种方式便会循环调用代理类自身的方法了
+//		Object result = methodProxy.invoke(proxy, args);
+		// 这种方式也是,其实际都是代理对象在调用自身的方法
+//		Object result = method.invoke(proxy, args);
 		after();
 		return result;
 	}

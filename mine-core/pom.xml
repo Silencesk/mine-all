@@ -6,6 +6,7 @@
 		<groupId>com.mine</groupId>
 		<artifactId>mine-parent</artifactId>
 		<version>0.0.4-SNAPSHOT</version>
+		<relativePath>../mine-parent</relativePath>
 	</parent>
 
 	<artifactId>mine-core</artifactId>
@@ -76,6 +77,11 @@
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sf.dozer</groupId>
+			<artifactId>dozer</artifactId>
 		</dependency>
 	</dependencies>
 </project>

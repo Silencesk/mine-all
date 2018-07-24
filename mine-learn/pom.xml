@@ -4,6 +4,7 @@
         <groupId>com.mine</groupId>
         <artifactId>mine-parent</artifactId>
         <version>0.0.4-SNAPSHOT</version>
+        <relativePath>../mine-parent</relativePath>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -16,6 +17,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <start-class>com.mine.learn.Application</start-class>
     </properties>
 
     <dependencies>
@@ -74,6 +76,10 @@
             <groupId>com.sun.tools.btrace</groupId>
             <artifactId>btrace-client</artifactId>
         </dependency>
+        <!--<dependency>-->
+            <!--<groupId>cglib</groupId>-->
+            <!--<artifactId>cglib</artifactId>-->
+        <!--</dependency>-->
     </dependencies>
 
     <build>
@@ -82,6 +88,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <mainClass>${start-class}</mainClass>
                 </configuration>
             </plugin>
         </plugins>
