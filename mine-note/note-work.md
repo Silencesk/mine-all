@@ -62,6 +62,7 @@ http://maven.oschina.net/content/groups/public
 * E:\workProgram\Java\jdk1.7.0_71
 * C:\ProgramData\Oracle\Java\javapath
 * C:\Users\gekeo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs
+* 按照shit+右键【从此处打开cmd、复制当前文件路径】
 
 ## redis
 * LPUSH mylist "three"
@@ -71,12 +72,13 @@ http://maven.oschina.net/content/groups/public
 
 
 ## mysql
-```
+```sql
 alter table t_book rename to bbb;
 alter table bbb change nnnnn hh int;
 mysqldump -u root -p db_uc > db_uc.sql
 alter table users AUTO_INCREMENT=123456;
 ALTER TABLE user add COLUMN dept_no VARCHAR(10) AFTER phone;
+ALTER TABLE logtest DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;    -- 修改大小写精度
 ```
 
 ## java
@@ -127,6 +129,17 @@ ALTER TABLE user add COLUMN dept_no VARCHAR(10) AFTER phone;
  *
  */
  ```
+ ## IntelliJ IDEA
+* 快捷插入类注释，参考[使用 IntelliJ 的 Live Templates 功能](http://jingyan.baidu.com/article/48b558e32a22b57f38c09a18.html)
+```java
+# live template
+*
+ * $desc$<br>
+ * @author liutao
+ * $date$ $time$
+ */
+ ```
+ ![class-comments](images/class-comments.png)
 
  ## accont
  ```
