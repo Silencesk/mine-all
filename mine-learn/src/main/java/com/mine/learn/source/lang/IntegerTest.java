@@ -23,4 +23,10 @@ public class IntegerTest {
         Integer c = 1 + 2;
         Assert.assertTrue(c == 3);
     }
+
+    @Test
+    public void test1(){
+        System.err.println(Integer.class.isAssignableFrom(Number.class));
+        System.err.println(Number.class.isAssignableFrom(Integer.class));
+    }
 }

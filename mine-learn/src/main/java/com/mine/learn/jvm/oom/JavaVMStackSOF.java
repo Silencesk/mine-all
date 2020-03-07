@@ -1,4 +1,4 @@
-package com.mine.learn.outofmemory;
+package com.mine.learn.jvm.oom;
 
 /**
  * VM Args：-Xss128k 栈帧太多，也就是函数调用层级过多）导致。检查是否有死递归的情况~

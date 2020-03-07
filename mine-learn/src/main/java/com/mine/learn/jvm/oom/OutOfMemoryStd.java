@@ -1,4 +1,4 @@
-package com.mine.learn.outofmemory;
+package com.mine.learn.jvm.oom;
 
 import java.util.ArrayList;
 import java.util.List;
